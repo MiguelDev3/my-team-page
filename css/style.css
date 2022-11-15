@@ -1,0 +1,129 @@
+/* My Variables */
+:root{
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'PT Serif', serif;
+    --footer-font: 'Montserrat', sans-serif;
+    --white-color: #fff;
+    --footer-color: #A9A9A9;
+}
+
+/*>>>>>>>>>> RESET <<<<<<<<<<<*/
+html{
+    scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li,ul{
+    list-style: none;
+}
+
+/*>>>>>>>>>> SITE STYLES <<<<<<<<<<<*/
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    padding: 24px 0;
+    z-index: 10;
+    width: 100%;
+    background: var(--white-color);
+}
+footer > p{
+    color: var(--footer-color);
+    text-align: center;
+    width: 100%;
+    font-family: var(--footer-font);
+    font-size: 14px;
+}
+h1{
+    font-family: var(--secondary-font);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+h2{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info-team{
+    display: flex;
+    position: relative;
+}
+.info-team:nth-child(odd){
+    margin-bottom: 5rem;
+}
+.info-team:nth-child(even){
+    margin-top: 5rem;
+}
+.info-team > figure{
+    width: 85%;
+    height: 85%;
+}
+.info-team > span{
+    font-family: var(--secondary-font);
+    font-size: 10px;
+    font-weight: 400;
+    writing-mode: vertical-lr;
+    margin: 0 auto;
+}
+main {
+    margin: 72px 12px 0;
+}
+main p{
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-right: 15%;
+    margin-bottom: 3.5rem;
+}
+.mate-photo img{
+    width: 100%;
+    height: 100%;
+}
+.mate-photo figcaption{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 600;
+}
+.team-photos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+@media screen and (min-width:768px) {
+    .info-team{
+        padding: 0 1.5rem;
+    }
+    .info-team > span{
+        font-size: 12px;
+    }
+    .team-photos{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .team-photos .info-team{
+        margin: 0;
+    }
+    .team-photos .top{
+        margin-bottom: 6rem;
+    }
+    .team-photos .bottom{
+        margin-top: 6rem;
+    }
+}
+@media screen and (min-width:991px) {
+    main{
+        margin: 72px auto 0;
+        max-width: 1200px;
+    }
+}
